@@ -1,4 +1,4 @@
-# Codex instructions
+# AI instructions
 
 This is a Cloudflare Pages website for a lawyer/law firm.
 
