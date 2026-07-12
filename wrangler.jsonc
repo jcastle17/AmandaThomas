@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "shiny-lake-6f21",
+  "compatibility_date": "2026-07-12",
+  "assets": {
+    "directory": "."
+  }
+}
