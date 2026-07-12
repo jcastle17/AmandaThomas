@@ -11,7 +11,12 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/ea82a590-12bd-43d5-80a4-c31560be8f69/7G2A1629.jpg">
   <link rel="preconnect" href="https://images.squarespace-cdn.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
 </head>
 <body>
 <header class="site-header">
@@ -32,33 +37,50 @@
   </div>
 </header>
 
-
 <main>
-  <section class="hero">
+  <section class="hero" data-hero aria-labelledby="home-hero-title">
     <div class="hero-inner">
-      <div data-reveal>
-        <span class="eyebrow">Licensed Paralegal Practitioner • Mediation</span>
-        <h1>Your Utah Legal Navigator: Clear Paths Through Family Law and Mediation.</h1>
-        <p>Empowering individuals in Utah with focused LPP services for family law, debt collection, and mediation.</p>
-        <div class="actions">
+      <div class="hero-copy">
+        <span class="eyebrow" data-hero-item>Licensed Paralegal Practitioner • Mediation</span>
+        <h1 id="home-hero-title" data-hero-item>Your Utah Legal Navigator: a clearer path through <span class="hero-word-accent">family law</span>.</h1>
+        <p data-hero-item>Focused, cost-conscious legal support for divorce, custody, child support, debt collection, and mediation—explained in plain language and built around your next practical step.</p>
+        <div class="actions" data-hero-item>
           <a class="button" href="contact.html">Schedule a free consultation</a>
-          <a class="button secondary" href="services.html">View services</a>
+          <a class="button secondary" href="services.html">Explore services</a>
         </div>
       </div>
-      <figure class="hero-card" data-reveal>
-        <img src="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/ea82a590-12bd-43d5-80a4-c31560be8f69/7G2A1629.jpg" alt="Amanda Thomas portrait" decoding="async" fetchpriority="high">
-        <figcaption>Divorce. Custody. Support. I handle the scary stuff — so you don’t have to.</figcaption>
-      </figure>
+
+      <div class="hero-portrait-wrap" data-hero-portrait>
+        <figure class="hero-card">
+          <img src="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/ea82a590-12bd-43d5-80a4-c31560be8f69/7G2A1629.jpg" alt="Amanda Thomas portrait" decoding="async" fetchpriority="high">
+          <figcaption>Divorce. Custody. Support. I handle the scary stuff—so you do not have to face it alone.</figcaption>
+        </figure>
+      </div>
     </div>
+    <div class="hero-scroll-cue" aria-hidden="true">Scroll</div>
   </section>
 
-  <section class="section">
-    <div class="section-head" data-reveal>
-      <h2>Practice areas</h2>
-      <p>Focused assistance for the types of Utah legal issues where an LPP can provide meaningful, cost-conscious help.</p>
+  <div class="motion-strip" aria-label="Amanda Thomas practice areas">
+    <div class="motion-strip-track">
+      <div class="motion-strip-group">
+        <span>Family Law</span><span>Custody & Parent-Time</span><span>Child Support</span><span>Mediation</span><span>Debt Collection</span><span>Limited-Scope Legal Help</span>
+      </div>
+      <div class="motion-strip-group" aria-hidden="true">
+        <span>Family Law</span><span>Custody & Parent-Time</span><span>Child Support</span><span>Mediation</span><span>Debt Collection</span><span>Limited-Scope Legal Help</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="practice-areas-title">
+    <div class="section-head" data-reveal="fade">
+      <div>
+        <span class="eyebrow">Focused Utah legal support</span>
+        <h2 id="practice-areas-title">Practice areas</h2>
+      </div>
+      <p>Practical assistance for legal matters where a Utah Licensed Paralegal Practitioner can provide meaningful, cost-conscious help.</p>
     </div>
     <div class="grid-3">
-      <article class="card" data-reveal>
+      <article class="card" data-reveal="left" data-reveal-delay="0">
         <img src="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/8918480e-46a1-40f2-b4bc-811299a99d5e/IMG_3566.jpg" alt="Family law graphic" loading="lazy" decoding="async">
         <div class="card-body">
           <h3>Family Law</h3>
@@ -66,7 +88,7 @@
           <a href="services.html">Explore family law services →</a>
         </div>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-reveal="scale" data-reveal-delay="120">
         <img src="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/20a8d38b-7a98-4121-8e11-b0bef18774d6/IMG_3568.jpg" alt="Small claims graphic" loading="lazy" decoding="async">
         <div class="card-body">
           <h3>Debt Collection</h3>
@@ -74,7 +96,7 @@
           <a href="services.html#debt-collection">View debt collection →</a>
         </div>
       </article>
-      <article class="card" data-reveal>
+      <article class="card" data-reveal="right" data-reveal-delay="240">
         <img src="https://images.squarespace-cdn.com/content/v1/663310a01893f068f81985ef/4b15383b-2afd-4d5f-989e-8629afbb9269/IMG_3681.jpg" alt="Mediation graphic" loading="lazy" decoding="async">
         <div class="card-body">
           <h3>Mediation</h3>
@@ -85,11 +107,36 @@
     </div>
   </section>
 
+  <section class="section grid-2" aria-labelledby="clear-guidance-title">
+    <div data-reveal="left">
+      <span class="eyebrow">Clarity before complexity</span>
+      <h2 id="clear-guidance-title">Legal guidance should make the next step easier to understand.</h2>
+      <p>Legal paperwork and court procedures can feel intimidating. Amanda focuses on direct explanations, clearly defined services, and practical options so clients can make informed decisions without unnecessary confusion.</p>
+      <div class="actions">
+        <a class="button" href="lpp.html">Understand LPP services</a>
+      </div>
+    </div>
+    <article class="card" data-reveal="right" data-reveal-delay="140">
+      <div class="card-body">
+        <span class="eyebrow">A focused process</span>
+        <h3>Start with the issue in front of you.</h3>
+        <p><strong>1.</strong> Identify the legal problem and the decision that needs to be made.</p>
+        <p><strong>2.</strong> Understand what an LPP can handle and where attorney representation may be required.</p>
+        <p><strong>3.</strong> Choose a clearly defined scope, billing structure, and next action.</p>
+        <a href="contact.html">Talk through your situation →</a>
+      </div>
+    </article>
+  </section>
+
   <section class="band">
-    <div class="section" data-reveal>
-      <h2>Achieve Clarity and Resolution with Focused Legal Support</h2>
-      <p>As a Utah Licensed Paralegal Practitioner, Amanda offers specialized, cost-effective support in family law, debt collection, and mediation. Understand when LPP services are the right fit for your needs.</p>
-      <div class="actions"><a class="button" href="lpp.html">What is an LPP?</a><a class="button secondary" href="billing.html">See billing options</a></div>
+    <div class="section" data-reveal="scale">
+      <span class="eyebrow">Focused support. Clear direction.</span>
+      <h2>Move forward with a legal plan you can understand.</h2>
+      <p>Amanda offers specialized, cost-effective support in family law, debt collection, and mediation, with service options designed for people who need practical help without unnecessary complexity.</p>
+      <div class="actions">
+        <a class="button" href="contact.html">Schedule a free consultation</a>
+        <a class="button secondary" href="billing.html">Review billing options</a>
+      </div>
     </div>
   </section>
 </main>
